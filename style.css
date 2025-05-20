@@ -1,0 +1,177 @@
+* {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  color: hsl(186, 14%, 43%);
+}
+
+.logo {
+  margin: 50px 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 25px;
+  max-width: 830px;
+}
+
+section {
+  padding: 10px 20px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 35px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-container input {
+  text-align: right;
+  padding: 8px 10px 8px 25px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(189, 47%, 97%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+
+input:focus {
+  outline-color: hsl(172, 67%, 45%);
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.input-container,
+.all-tips {
+  margin-bottom: 30px;
+}
+
+.all-tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.all-tips button {
+  color: #fff;
+  background-color: hsl(183, 100%, 15%);
+  text-align: center;
+  transition: all ease 0.2s;
+}
+
+.all-tips input {
+  text-align: right;
+  background-color: hsl(189, 47%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+
+.all-tips button,
+.all-tips input {
+  width: 100%;
+  height: inherit;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.all-tips button:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+.active{
+  color: hsl(183, 100%, 15%) !important;
+  background-color: hsl(172, 67%, 45%) !important;
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount div:first-child h3 {
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.amount div:first-child p {
+  margin-top: 5px;
+  color: hsl(184, 14%, 56%);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.amount div:last-child {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  color: hsl(172, 67%, 45%);
+  font-size: 40px;
+}
+
+.amount div:last-child img {
+  width: 20px;
+  filter: grayscale(100%) sepia(1) hue-rotate(114deg) saturate(4) brightness(0.78);
+}
+
+.result button{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 25px
+}
+
+.result button:hover{
+  background-color: hsl(172, 72%, 52%);
+}
+
+@media only screen and (max-width: 750px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    gap: 20px;
+  } 
+}
